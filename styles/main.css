@@ -1455,3 +1455,7 @@ body {
           color: #212529;
         }
       
+        #sitegotimeDate,#sitegotimes,#footinfo,#footinfo a{
+          color: black;
+        }
+      
