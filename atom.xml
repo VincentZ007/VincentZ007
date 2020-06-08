@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://VincentZ007.github.io/</id>
     <title>Vincent&apos;s Blog</title>
-    <updated>2020-06-08T01:56:18.366Z</updated>
+    <updated>2020-06-08T02:21:03.957Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://VincentZ007.github.io/"/>
     <link rel="self" href="https://VincentZ007.github.io/atom.xml"/>
@@ -10,6 +10,26 @@
     <logo>https://VincentZ007.github.io/images/avatar.png</logo>
     <icon>https://VincentZ007.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Vincent&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[笔记-2020/06/08]]></title>
+        <id>https://VincentZ007.github.io/post/bi-ji-20200608/</id>
+        <link href="https://VincentZ007.github.io/post/bi-ji-20200608/">
+        </link>
+        <updated>2020-06-08T06:11:49.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="学习内容">学习内容：</h2>
+<ul>
+<li>Github注册，远程仓库创建</li>
+<li>Gridea博客搭建</li>
+<li>卜算子网页访问次数统计</li>
+<li>HbuildX安装，并查看 Gridea源码</li>
+<li>Html，CSS，Js简介</li>
+</ul>
+<h2 id="作业">作业：</h2>
+<ul>
+<li>撰写“关于”界面的博客，内容为自我介绍</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://VincentZ007.github.io/post/hello-gridea/</id>
