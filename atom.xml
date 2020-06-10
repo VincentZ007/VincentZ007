@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://VincentZ007.github.io/</id>
     <title>Vincent&apos;s Blog</title>
-    <updated>2020-06-10T08:43:50.541Z</updated>
+    <updated>2020-06-10T10:09:55.546Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://VincentZ007.github.io/"/>
     <link rel="self" href="https://VincentZ007.github.io/atom.xml"/>
@@ -10,6 +10,35 @@
     <logo>https://VincentZ007.github.io/images/avatar.png</logo>
     <icon>https://VincentZ007.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Vincent&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[笔记-2020/06/10]]></title>
+        <id>https://VincentZ007.github.io/post/bi-ji-20200610/</id>
+        <link href="https://VincentZ007.github.io/post/bi-ji-20200610/">
+        </link>
+        <updated>2020-06-10T16:50:22.000Z</updated>
+        <content type="html"><![CDATA[<p>##老师发的</p>
+<ol>
+<li>添加Valine评论系统：在主题/config.json中修改添加Valine相关源码；</li>
+<li></li>
+</ol>
+<p>①在主题/templates/includes/中引入valine.ejs<br>
+②在主题/templates/post.ejs中引入<br>
+&lt;% if(typeof site.customConfig['valine']!=='undefined' &amp;&amp; site.customConfig['valine']) { %&gt;<br>
+&lt;%- include('./includes/valine') %&gt;<br>
+&lt;% } %&gt;<br>
+3. Valine评论系统简介：https://valine.js.org/；<br>
+4. Valine注册使用：https://github.com/DesertsP/Valine-Admin；<br>
+5. Valine邮件绑定；使用教程https://www.antmoe.com/posts/2380732b/index.html<br>
+6. 添加百度统计功能https://tongji.baidu.com/web/welcome/login<br>
+教程https://kily-007.github.io/post/gridea-tian-jia-bai-du-tong-ji/</p>
+<p>##笔记<br>
+今天学习了给博客添加留言功能。<br>
+这节课我先是注册了Valine账号（国际版），然后在Valine中创建了项目，添加了许多的环境变量：<br>
+<img src="https://VincentZ007.github.io//post-images/1591783308001.png" alt="" loading="lazy"><br>
+之后要在Gridea上添加留言功能，最开始的时候我选择的主题并没有自带Valine评论配置，所以就弄了半天，最后还是选择换了一个带Valine评论配置主题。<br>
+然后需要用Hbuilder来修改一些源代码，添加一个单独的留言页，最终也是成功完成了。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[笔记-2020/06/08]]></title>
         <id>https://VincentZ007.github.io/post/bi-ji-20200608/</id>
@@ -35,17 +64,18 @@
         <id>https://VincentZ007.github.io/post/about/</id>
         <link href="https://VincentZ007.github.io/post/about/">
         </link>
-        <updated>2019-01-25T17:09:48.000Z</updated>
+        <updated>2019-01-25T20:09:48.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
 <p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
 </blockquote>
 <h2 id="关于本站">🏠 关于本站</h2>
-<p>于2020/6/8创建</p>
+<p>于2020/6/8创建, 是老师教我弄的，可以用来记笔记</p>
 <h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<p>一个高一学生</p>
+<p>一个高一学生，正在学习编程，以后想考计算机专业</p>
 <h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
 <p>编程做游戏，弹琴</p>
 <h2 id="联系我呀">📬 联系我呀</h2>
+<p>QQ邮箱：2650635962@qq.com</p>
 ]]></content>
     </entry>
     <entry>

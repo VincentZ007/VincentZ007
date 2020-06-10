@@ -1,6 +1,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="##老师发的
+
+添加Valine评论系统：在主题/config.json中修改添加Valine相关源码；
+
+
+①在主题/templates/includes/中引入valine.ejs
+②在主题/templates/post.ejs中引入
+..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://VincentZ007.github.io//media/css/bootstrap.min.css">
     
     <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/rainbow.min.css">
@@ -305,6 +314,111 @@
                     <div class="close"></div>
                 </div>
                 <div id="main" class="col-xs-12 col-sm-7">
+                    <link rel="stylesheet" href="https://VincentZ007.github.io//media/css/font-awesome.css">
+<style>
+
+</style>
+
+<body>
+    <div class="allcontent">
+        <div class="postshow">
+            
+            <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
+                
+                <img src="" class="postimage">
+                
+            </div>
+            <div class="postinfo">
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-06-11</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
+            <div class="posttag">
+                
+            </div>
+        </div>
+        
+        <div id="texttitle" style="text-align: center">
+            <h2>笔记-2020/06/10</h2>
+            <!-- id 将作为查询条件 -->
+            <div id="pl" style="display:none">https://VincentZ007.github.io/post/bi-ji-20200610/</div>
+            <div id="rootaddr" style="display:none">https://VincentZ007.github.io/</div>
+            <span id="hotnum" class="leancloud_visitors" data-flag-title="笔记-2020/06/10">
+                <h4 class="readercount">热度🔥: <i class="leancloud-visitors-count">loading...</i></h4>
+            </span>
+        </div>
+        <div class="text ">
+            <p>##老师发的</p>
+<ol>
+<li>添加Valine评论系统：在主题/config.json中修改添加Valine相关源码；</li>
+<li></li>
+</ol>
+<p>①在主题/templates/includes/中引入valine.ejs<br>
+②在主题/templates/post.ejs中引入<br>
+&lt;% if(typeof site.customConfig['valine']!=='undefined' &amp;&amp; site.customConfig['valine']) { %&gt;<br>
+&lt;%- include('./includes/valine') %&gt;<br>
+&lt;% } %&gt;<br>
+3. Valine评论系统简介：https://valine.js.org/；<br>
+4. Valine注册使用：https://github.com/DesertsP/Valine-Admin；<br>
+5. Valine邮件绑定；使用教程https://www.antmoe.com/posts/2380732b/index.html<br>
+6. 添加百度统计功能https://tongji.baidu.com/web/welcome/login<br>
+教程https://kily-007.github.io/post/gridea-tian-jia-bai-du-tong-ji/</p>
+<p>##笔记<br>
+今天学习了给博客添加留言功能。<br>
+这节课我先是注册了Valine账号（国际版），然后在Valine中创建了项目，添加了许多的环境变量：<br>
+<img src="https://VincentZ007.github.io//post-images/1591783308001.png" alt="" loading="lazy"><br>
+之后要在Gridea上添加留言功能，最开始的时候我选择的主题并没有自带Valine评论配置，所以就弄了半天，最后还是选择换了一个带Valine评论配置主题。<br>
+然后需要用Hbuilder来修改一些源代码，添加一个单独的留言页，最终也是成功完成了。</p>
+
+        </div>
+        
+        
+        <div class="next-post">
+            下一篇
+            <a href="https://VincentZ007.github.io/post/bi-ji-20200608/">
+                笔记-2020/06/08
+            </a>
+        </div>
+        
+    </div>
+    </div>
+</body>
+<script>
+    var t_img; // 定时�?
+    var isLoad = true; // 控制变量
+    isImgLoad(function () {
+        // 加载完成
+        $('.postdetailimg').css("display", "block");
+    });
+    // 判断图片加载的函�?
+    function isImgLoad(callback) {
+        // 注意我的图片类名都是cover，因为我�?需要�?�理cover。其它图片可以不管�?
+        // 查找所有封面图，迭代�?�理
+        $('.postdetailimg').each(function () {
+            // 找到�?0就将isLoad设为false，并退出each
+            if (this.height === 0) {
+                isLoad = false;
+                return false;
+            }
+        });
+        // 为true，没有发现为0的。加载完�?
+        if (isLoad) {
+            clearTimeout(t_img); // 清除定时�?
+            // 回调函数
+            callback();
+            // 为false，因为找到了没有加载完成的图，将调用定时器递归
+        } else {
+            isLoad = true;
+            t_img = setTimeout(function () {
+                isImgLoad(callback); // 递归�?�?
+            }, 500); // 我这里�?�置的是500�?秒就�?描一次，�?以自己调�?
+        }
+    }
+
+    //文章阅读热度
+    var pl = $("#pl").html();
+    var rootaddr = $("#rootaddr").html();
+    pl = pl.replace(rootaddr, "");
+    $("#hotnum").attr('id', pl);
+</script>
                     <div name="comment" style="background: white">
                         <div class="commentcontainer">
                             
@@ -370,6 +484,9 @@
                             
                         </div>
                     </div>
+                </div>
+                <div class="toc-container">
+                    
                 </div>
             </div>
         </div>
@@ -477,6 +594,111 @@
   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
         <div style="margin-top:30px"></div>
+        <link rel="stylesheet" href="https://VincentZ007.github.io//media/css/font-awesome.css">
+<style>
+
+</style>
+
+<body>
+    <div class="allcontent">
+        <div class="postshow">
+            
+            <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
+                
+                <img src="" class="postimage">
+                
+            </div>
+            <div class="postinfo">
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-06-11</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
+            <div class="posttag">
+                
+            </div>
+        </div>
+        
+        <div id="texttitle" style="text-align: center">
+            <h2>笔记-2020/06/10</h2>
+            <!-- id 将作为查询条件 -->
+            <div id="pl" style="display:none">https://VincentZ007.github.io/post/bi-ji-20200610/</div>
+            <div id="rootaddr" style="display:none">https://VincentZ007.github.io/</div>
+            <span id="hotnum" class="leancloud_visitors" data-flag-title="笔记-2020/06/10">
+                <h4 class="readercount">热度🔥: <i class="leancloud-visitors-count">loading...</i></h4>
+            </span>
+        </div>
+        <div class="text ">
+            <p>##老师发的</p>
+<ol>
+<li>添加Valine评论系统：在主题/config.json中修改添加Valine相关源码；</li>
+<li></li>
+</ol>
+<p>①在主题/templates/includes/中引入valine.ejs<br>
+②在主题/templates/post.ejs中引入<br>
+&lt;% if(typeof site.customConfig['valine']!=='undefined' &amp;&amp; site.customConfig['valine']) { %&gt;<br>
+&lt;%- include('./includes/valine') %&gt;<br>
+&lt;% } %&gt;<br>
+3. Valine评论系统简介：https://valine.js.org/；<br>
+4. Valine注册使用：https://github.com/DesertsP/Valine-Admin；<br>
+5. Valine邮件绑定；使用教程https://www.antmoe.com/posts/2380732b/index.html<br>
+6. 添加百度统计功能https://tongji.baidu.com/web/welcome/login<br>
+教程https://kily-007.github.io/post/gridea-tian-jia-bai-du-tong-ji/</p>
+<p>##笔记<br>
+今天学习了给博客添加留言功能。<br>
+这节课我先是注册了Valine账号（国际版），然后在Valine中创建了项目，添加了许多的环境变量：<br>
+<img src="https://VincentZ007.github.io//post-images/1591783308001.png" alt="" loading="lazy"><br>
+之后要在Gridea上添加留言功能，最开始的时候我选择的主题并没有自带Valine评论配置，所以就弄了半天，最后还是选择换了一个带Valine评论配置主题。<br>
+然后需要用Hbuilder来修改一些源代码，添加一个单独的留言页，最终也是成功完成了。</p>
+
+        </div>
+        
+        
+        <div class="next-post">
+            下一篇
+            <a href="https://VincentZ007.github.io/post/bi-ji-20200608/">
+                笔记-2020/06/08
+            </a>
+        </div>
+        
+    </div>
+    </div>
+</body>
+<script>
+    var t_img; // 定时�?
+    var isLoad = true; // 控制变量
+    isImgLoad(function () {
+        // 加载完成
+        $('.postdetailimg').css("display", "block");
+    });
+    // 判断图片加载的函�?
+    function isImgLoad(callback) {
+        // 注意我的图片类名都是cover，因为我�?需要�?�理cover。其它图片可以不管�?
+        // 查找所有封面图，迭代�?�理
+        $('.postdetailimg').each(function () {
+            // 找到�?0就将isLoad设为false，并退出each
+            if (this.height === 0) {
+                isLoad = false;
+                return false;
+            }
+        });
+        // 为true，没有发现为0的。加载完�?
+        if (isLoad) {
+            clearTimeout(t_img); // 清除定时�?
+            // 回调函数
+            callback();
+            // 为false，因为找到了没有加载完成的图，将调用定时器递归
+        } else {
+            isLoad = true;
+            t_img = setTimeout(function () {
+                isImgLoad(callback); // 递归�?�?
+            }, 500); // 我这里�?�置的是500�?秒就�?描一次，�?以自己调�?
+        }
+    }
+
+    //文章阅读热度
+    var pl = $("#pl").html();
+    var rootaddr = $("#rootaddr").html();
+    pl = pl.replace(rootaddr, "");
+    $("#hotnum").attr('id', pl);
+</script>
         <div name="comment" style="background: white;margin-top:100px">
             <div class="commentcontainer">
                 
