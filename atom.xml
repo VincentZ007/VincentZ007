@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://VincentZ007.github.io/</id>
     <title>Vincent&apos;s Blog</title>
-    <updated>2020-06-14T07:11:13.966Z</updated>
+    <updated>2020-06-14T07:14:03.846Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://VincentZ007.github.io/"/>
     <link rel="self" href="https://VincentZ007.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://VincentZ007.github.io/post/bi-ji-2020614/</id>
         <link href="https://VincentZ007.github.io/post/bi-ji-2020614/">
         </link>
-        <updated>2020-06-14T16:22:54.000Z</updated>
+        <updated>2020-06-14T18:22:54.000Z</updated>
         <content type="html"><![CDATA[<ol>
 <li>
 <p>添加百度统计😁</p>
@@ -25,6 +25,89 @@
 <hr>
 </li>
 </ol>
+<pre><code>##1.标题
+&gt; 兼容Html语法， 标题逐渐变小: \&lt;h1&gt;-\&lt;h5&gt;
+&gt; Markdwon情法， 标题逐新变小:
+&gt; #
+&gt; ##
+&gt; ###
+&gt; ####
+&gt; #####
+&lt;h1&gt;月夜与客饮酒杏花下&lt;/h1&gt;
+&lt;h5&gt;宋代:苏轼&lt;/h5&gt;
+
+---
+
+##2.换行
+&gt; \&lt;br/&gt;
+
+---
+
+##3.字体样式
+&gt; \*content*斜体
+&gt; \**content**粗体
+&gt; \***content***粗斜体
+
+---
+
+##4.分割线
+\---
+\***
+
+---
+
+##5.划掉线
+~~划掉文字~~
+
+   ---
+
+##6.下划线
+&lt;u&gt;下划文字&lt;/u&gt;
+
+   ---
+
+##7.无序列表
++ 无序列表
+- 无序列表
+* 无序列表
+
+   ---
+
+##8.有序列表
+1. 第一列
+2. 第二列
+
+   ---
+
+##9.嵌套模块
+&gt;第一层
+&gt;&gt;第二层
+&gt;&gt;&gt;第三层
+
+   ---
+
+##10.链接
+直接显示链接: &lt;https://www.baidu.com&gt;
+隐藏链接: [百度](https://www.baidu.com)
+
+   ---
+
+##11.图片
+![头像](https://photos-1258928558.cos.ap-guangzhou.myqcloud.com/avatar_1591965590089.jpeg)
+
+   ---
+
+##12.表格
+|  表头   | 表头  |
+|  ----  | ----  |
+| 单元格  | 单元格 |
+| 单元格  | 单元格 |
+
+   ---
+
+##13.[markdown语法链接](https://www.baidu.com)
+</code></pre>
+<hr>
 <p>##1.标题</p>
 <blockquote>
 <p>兼容Html语法， 标题逐渐变小: &lt;h1&gt;-&lt;h5&gt;<br>
@@ -56,8 +139,10 @@ Markdwon情法， 标题逐新变小:</p>
 <hr>
 <p>##5.划掉线<br>
 <s>划掉文字</s></p>
+<hr>
 <p>##6.下划线<br>
 <u>下划文字</u></p>
+<hr>
 <p>##7.无序列表</p>
 <ul>
 <li>无序列表</li>
@@ -66,12 +151,20 @@ Markdwon情法， 标题逐新变小:</p>
 <li>无序列表</li>
 </ul>
 <ul>
-<li>无序列表</li>
+<li>
+<p>无序列表</p>
+<hr>
+</li>
 </ul>
 <p>##8.有序列表</p>
 <ol>
-<li>第一列</li>
-<li>第二列</li>
+<li>
+<p>第一列</p>
+</li>
+<li>
+<p>第二列</p>
+<hr>
+</li>
 </ol>
 <p>##9.嵌套模块</p>
 <blockquote>
@@ -83,11 +176,14 @@ Markdwon情法， 标题逐新变小:</p>
 </blockquote>
 </blockquote>
 </blockquote>
+<hr>
 <p>##10.链接<br>
 直接显示链接: <a href="https://www.baidu.com">https://www.baidu.com</a><br>
 隐藏链接: <a href="https://www.baidu.com">百度</a></p>
+<hr>
 <p>##11.图片<br>
 <img src="https://photos-1258928558.cos.ap-guangzhou.myqcloud.com/avatar_1591965590089.jpeg" alt="头像" loading="lazy"></p>
+<hr>
 <p>##12.表格</p>
 <table>
 <thead>
@@ -107,6 +203,7 @@ Markdwon情法， 标题逐新变小:</p>
 </tr>
 </tbody>
 </table>
+<hr>
 <p>##13.<a href="https://www.baidu.com">markdown语法链接</a></p>
 ]]></content>
     </entry>
