@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://VincentZ007.github.io/</id>
     <title>Vincent&apos;s Blog</title>
-    <updated>2020-06-14T04:01:33.581Z</updated>
+    <updated>2020-06-14T07:04:25.851Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://VincentZ007.github.io/"/>
     <link rel="self" href="https://VincentZ007.github.io/atom.xml"/>
@@ -10,6 +10,86 @@
     <logo>https://VincentZ007.github.io/images/avatar.png</logo>
     <icon>https://VincentZ007.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Vincent&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[笔记-2020/6/14]]></title>
+        <id>https://VincentZ007.github.io/post/bi-ji-2020614/</id>
+        <link href="https://VincentZ007.github.io/post/bi-ji-2020614/">
+        </link>
+        <updated>2020-06-14T08:22:54.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>
+<p>添加百度统计😁</p>
+</li>
+<li>
+<p>MarkDown基本语法学习😆</p>
+<hr>
+</li>
+</ol>
+<p>##1.标题</p>
+<blockquote>
+<p>兼容Html语法， 标题逐渐变小: &lt;h1&gt;-&lt;h5&gt;<br>
+Markdwon情法， 标题逐新变小:</p>
+<h1 id=""></h1>
+<h2 id="-2"></h2>
+<h3 id="-3"></h3>
+<h4 id="-4"></h4>
+<h5 id="-5"></h5>
+</blockquote>
+<h1>月夜与客饮酒杏花下</h1>
+<h5>宋代:苏轼</h5>
+<hr>
+<p>##2.换行</p>
+<blockquote>
+<p>&lt;br/&gt;</p>
+</blockquote>
+<hr>
+<p>##3.字体样式</p>
+<blockquote>
+<p>*content*斜体<br>
+**content*<em>粗体<br>
+*<strong>content</strong></em>粗斜体</p>
+</blockquote>
+<hr>
+<p>##4.分割线<br>
+---<br>
+***</p>
+<hr>
+<p>##5.划掉线<br>
+<s>划掉文字</s></p>
+<p>##6.下划线<br>
+<u>下划文字</u></p>
+<p>##7.无序列表</p>
+<ul>
+<li>无序列表</li>
+</ul>
+<ul>
+<li>无序列表</li>
+</ul>
+<ul>
+<li>无序列表</li>
+</ul>
+<p>##8.有序列表</p>
+<ol>
+<li>第一列</li>
+<li>第二列</li>
+</ol>
+<p>##9.嵌套模块</p>
+<blockquote>
+<p>第一层</p>
+<blockquote>
+<p>第二层</p>
+<blockquote>
+<p>第三层</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>##10.链接<br>
+直接显示链接: &lt;https: //www. baidu. com&gt;<br>
+隐藏链接: [百度](https : //www. baidu. com)</p>
+<p>##11.图片<br>
+<img src="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2F699pic.com%2Ftupian-400110709.html&amp;psig=AOvVaw0TRhoc2V1RtzadVsut0JMP&amp;ust=1592204567966000&amp;source=images&amp;cd=vfe&amp;ved=0CAIQjRxqFwoTCKiY-6_egOoCFQAAAAAdAAAAABAO" alt="图片" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[笔记-2020/06/10]]></title>
         <id>https://VincentZ007.github.io/post/bi-ji-20200610/</id>
