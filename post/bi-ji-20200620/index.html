@@ -2,19 +2,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="
-
-添加百度统计😁
-
-
-MarkDown基本语法学习😆
-
-
-
-##1.标题
-&gt; 兼容Html语法， 标题逐渐变小: \&lt;h1&gt;-\&lt;h5&gt;
-&gt; Markdwon情法， 标题逐新变小:
-&gt; #
-&..." />
+顺序表题解
+④删除有序顺序表中所有重复的值，使得表中所有元素的值均不相同。
+	//删除有序顺序表中的重复元素
+	public void deleteSame() {
+		for (int i = 0; i &lt; len-1; i++)..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://VincentZ007.github.io//media/css/bootstrap.min.css">
     
@@ -330,10 +322,10 @@ MarkDown基本语法学习😆
         <div class="postshow">
             
             <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
-                <img src="https://VincentZ007.github.io//post-images/bi-ji-2020614.png" class="postimage" style="cursor:auto">
+                <img src="https://VincentZ007.github.io//post-images/bi-ji-20200620.png" class="postimage" style="cursor:auto">
             </div>
             <div class="postinfo">
-                <div class="postdate"><i class="fa fa-calendar"></i>2020-06-15</div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-06-20</div>
                 <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
                 <div class="posttag">
                     
@@ -341,219 +333,56 @@ MarkDown基本语法学习😆
             </div>
             
         <div id="texttitle" style="text-align: center">
-            <h2>笔记-2020/6/14</h2>
+            <h2>笔记-2020/06/20</h2>
             <!-- id 将作为查询条件 -->
-            <div id="pl" style="display:none">https://VincentZ007.github.io/post/bi-ji-2020614/</div>
+            <div id="pl" style="display:none">https://VincentZ007.github.io/post/bi-ji-20200620/</div>
             <div id="rootaddr" style="display:none">https://VincentZ007.github.io/</div>
-            <span id="hotnum" class="leancloud_visitors" data-flag-title="笔记-2020/6/14">
+            <span id="hotnum" class="leancloud_visitors" data-flag-title="笔记-2020/06/20">
                 <h4 class="readercount">热度🔥: <i class="leancloud-visitors-count">loading...</i></h4>
             </span>
         </div>
         <div class="text ">
-            <ol>
-<li>
-<p>添加百度统计😁</p>
-</li>
-<li>
-<p>MarkDown基本语法学习😆</p>
-<hr>
-</li>
-</ol>
-<pre><code>##1.标题
-&gt; 兼容Html语法， 标题逐渐变小: \&lt;h1&gt;-\&lt;h5&gt;
-&gt; Markdwon情法， 标题逐新变小:
-&gt; #
-&gt; ##
-&gt; ###
-&gt; ####
-&gt; #####
-&lt;h1&gt;月夜与客饮酒杏花下&lt;/h1&gt;
-&lt;h5&gt;宋代:苏轼&lt;/h5&gt;
-
----
-
-##2.换行
-&gt; \&lt;br/&gt;
-
----
-
-##3.字体样式
-&gt; \*content*斜体
-&gt; \**content**粗体
-&gt; \***content***粗斜体
-
----
-
-##4.分割线
-\---
-\***
-
----
-
-##5.划掉线
-~~划掉文字~~
-
-   ---
-
-##6.下划线
-&lt;u&gt;下划文字&lt;/u&gt;
-
-   ---
-
-##7.无序列表
-+ 无序列表
-- 无序列表
-* 无序列表
-
-   ---
-
-##8.有序列表
-1. 第一列
-2. 第二列
-
-   ---
-
-##9.嵌套模块
-&gt;第一层
-&gt;&gt;第二层
-&gt;&gt;&gt;第三层
-
-   ---
-
-##10.链接
-直接显示链接: &lt;https://www.baidu.com&gt;
-隐藏链接: [百度](https://www.baidu.com)
-
-   ---
-
-##11.图片
-![头像](https://photos-1258928558.cos.ap-guangzhou.myqcloud.com/avatar_1591965590089.jpeg)
-
-   ---
-
-##12.表格
-|  表头   | 表头  |
-|  ----  | ----  |
-| 单元格  | 单元格 |
-| 单元格  | 单元格 |
-
-   ---
-
-##13.[markdown语法链接](https://www.runoob.com/markdown/md-tutorial.html)
+            <hr>
+<h1 id="顺序表题解">顺序表题解</h1>
+<p>④删除<strong>有序</strong>顺序表中所有重复的值，使得表中所有元素的值均不相同。</p>
+<pre><code>	//删除有序顺序表中的重复元素
+	public void deleteSame() {
+		for (int i = 0; i &lt; len-1; i++) {
+			if(data[i]==data[i+1]) {
+				delete(i+1);
+				i--;
+			}
+		}
+	}
 </code></pre>
-<hr>
-<p>##1.标题</p>
-<blockquote>
-<p>兼容Html语法， 标题逐渐变小: &lt;h1&gt;-&lt;h5&gt;<br>
-Markdwon情法， 标题逐新变小:</p>
-<h1 id=""></h1>
-<h2 id="-2"></h2>
-<h3 id="-3"></h3>
-<h4 id="-4"></h4>
-<h5 id="-5"></h5>
-</blockquote>
-<h1>月夜与客饮酒杏花下</h1>
-<h5>宋代:苏轼</h5>
-<hr>
-<p>##2.换行</p>
-<blockquote>
-<p>&lt;br/&gt;</p>
-</blockquote>
-<hr>
-<p>##3.字体样式</p>
-<blockquote>
-<p>*content*斜体<br>
-**content*<em>粗体<br>
-*<strong>content</strong></em>粗斜体</p>
-</blockquote>
-<hr>
-<p>##4.分割线<br>
----<br>
-***</p>
-<hr>
-<p>##5.划掉线<br>
-<s>划掉文字</s></p>
-<hr>
-<p>##6.下划线<br>
-<u>下划文字</u></p>
-<hr>
-<p>##7.无序列表</p>
-<ul>
-<li>无序列表</li>
-</ul>
-<ul>
-<li>无序列表</li>
-</ul>
-<ul>
-<li>
-<p>无序列表</p>
-<hr>
-</li>
-</ul>
-<p>##8.有序列表</p>
-<ol>
-<li>
-<p>第一列</p>
-</li>
-<li>
-<p>第二列</p>
-<hr>
-</li>
-</ol>
-<p>##9.嵌套模块</p>
-<blockquote>
-<p>第一层</p>
-<blockquote>
-<p>第二层</p>
-<blockquote>
-<p>第三层</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<hr>
-<p>##10.链接<br>
-直接显示链接: <a href="https://www.baidu.com">https://www.baidu.com</a><br>
-隐藏链接: <a href="https://www.baidu.com">百度</a></p>
-<hr>
-<p>##11.图片<br>
-<img src="https://photos-1258928558.cos.ap-guangzhou.myqcloud.com/avatar_1591965590089.jpeg" alt="头像" loading="lazy"></p>
-<hr>
-<p>##12.表格</p>
-<table>
-<thead>
-<tr>
-<th>表头</th>
-<th>表头</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-<tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<p>##13.<a href="https://www.runoob.com/markdown/md-tutorial.html">markdown语法链接</a></p>
+<p>⑤删除顺序表中所有重复的值，使得表中所有元素的值均不相同。</p>
+<pre><code>	//删除顺序表中的重复元素
+	public void deleteSame2() {
+		
+		int[] arr=new int[23];
+		for (int i = 0; i &lt; len; i++) {
+			arr[data[i]]++;
+		}
+		
+		System.out.println();
+		for (int i = 0; i &lt; arr.length; i++) {
+			if(arr[i]!=0)
+				System.out.print(i+&quot; &quot;);
+		}
+		
+	}
+</code></pre>
+<h1 id="单链表">单链表</h1>
+<p>定义：线性表的链式存储又称单链表。它是指通过一组<strong>任意</strong>的存储单元来存储线性表中的数据元素。</p>
+<p>弱点：由于单链表的元素离散的分布在存储空间中，所以单链表是一种非随机存取得存储结构。即不能直接找到表中某个特定的结点。</p>
 
-        </div>
-        
-        <div class="prev-post">
-            上一篇
-            <a href="https://VincentZ007.github.io/post/bi-ji-20200615/">
-                笔记-2020/06/15
-            </a>
         </div>
         
         
         <div class="next-post">
             下一篇
-            <a href="https://VincentZ007.github.io/post/bi-ji-20200610/">
-                笔记-2020/06/10
+            <a href="https://VincentZ007.github.io/post/bi-ji-20200617/">
+                笔记-2020/06/17
             </a>
         </div>
         
@@ -686,23 +515,8 @@ var _hmt = _hmt || [];
                 </div>
                 <div class="toc-container">
                     <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a href="#%E9%A1%BA%E5%BA%8F%E8%A1%A8%E9%A2%98%E8%A7%A3">顺序表题解</a></li>
+<li><a href="#%E5%8D%95%E9%93%BE%E8%A1%A8">单链表</a></li>
 </ul>
 
                 </div>
@@ -831,10 +645,10 @@ var _hmt = _hmt || [];
         <div class="postshow">
             
             <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
-                <img src="https://VincentZ007.github.io//post-images/bi-ji-2020614.png" class="postimage" style="cursor:auto">
+                <img src="https://VincentZ007.github.io//post-images/bi-ji-20200620.png" class="postimage" style="cursor:auto">
             </div>
             <div class="postinfo">
-                <div class="postdate"><i class="fa fa-calendar"></i>2020-06-15</div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-06-20</div>
                 <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
                 <div class="posttag">
                     
@@ -842,219 +656,56 @@ var _hmt = _hmt || [];
             </div>
             
         <div id="texttitle" style="text-align: center">
-            <h2>笔记-2020/6/14</h2>
+            <h2>笔记-2020/06/20</h2>
             <!-- id 将作为查询条件 -->
-            <div id="pl" style="display:none">https://VincentZ007.github.io/post/bi-ji-2020614/</div>
+            <div id="pl" style="display:none">https://VincentZ007.github.io/post/bi-ji-20200620/</div>
             <div id="rootaddr" style="display:none">https://VincentZ007.github.io/</div>
-            <span id="hotnum" class="leancloud_visitors" data-flag-title="笔记-2020/6/14">
+            <span id="hotnum" class="leancloud_visitors" data-flag-title="笔记-2020/06/20">
                 <h4 class="readercount">热度🔥: <i class="leancloud-visitors-count">loading...</i></h4>
             </span>
         </div>
         <div class="text ">
-            <ol>
-<li>
-<p>添加百度统计😁</p>
-</li>
-<li>
-<p>MarkDown基本语法学习😆</p>
-<hr>
-</li>
-</ol>
-<pre><code>##1.标题
-&gt; 兼容Html语法， 标题逐渐变小: \&lt;h1&gt;-\&lt;h5&gt;
-&gt; Markdwon情法， 标题逐新变小:
-&gt; #
-&gt; ##
-&gt; ###
-&gt; ####
-&gt; #####
-&lt;h1&gt;月夜与客饮酒杏花下&lt;/h1&gt;
-&lt;h5&gt;宋代:苏轼&lt;/h5&gt;
-
----
-
-##2.换行
-&gt; \&lt;br/&gt;
-
----
-
-##3.字体样式
-&gt; \*content*斜体
-&gt; \**content**粗体
-&gt; \***content***粗斜体
-
----
-
-##4.分割线
-\---
-\***
-
----
-
-##5.划掉线
-~~划掉文字~~
-
-   ---
-
-##6.下划线
-&lt;u&gt;下划文字&lt;/u&gt;
-
-   ---
-
-##7.无序列表
-+ 无序列表
-- 无序列表
-* 无序列表
-
-   ---
-
-##8.有序列表
-1. 第一列
-2. 第二列
-
-   ---
-
-##9.嵌套模块
-&gt;第一层
-&gt;&gt;第二层
-&gt;&gt;&gt;第三层
-
-   ---
-
-##10.链接
-直接显示链接: &lt;https://www.baidu.com&gt;
-隐藏链接: [百度](https://www.baidu.com)
-
-   ---
-
-##11.图片
-![头像](https://photos-1258928558.cos.ap-guangzhou.myqcloud.com/avatar_1591965590089.jpeg)
-
-   ---
-
-##12.表格
-|  表头   | 表头  |
-|  ----  | ----  |
-| 单元格  | 单元格 |
-| 单元格  | 单元格 |
-
-   ---
-
-##13.[markdown语法链接](https://www.runoob.com/markdown/md-tutorial.html)
+            <hr>
+<h1 id="顺序表题解">顺序表题解</h1>
+<p>④删除<strong>有序</strong>顺序表中所有重复的值，使得表中所有元素的值均不相同。</p>
+<pre><code>	//删除有序顺序表中的重复元素
+	public void deleteSame() {
+		for (int i = 0; i &lt; len-1; i++) {
+			if(data[i]==data[i+1]) {
+				delete(i+1);
+				i--;
+			}
+		}
+	}
 </code></pre>
-<hr>
-<p>##1.标题</p>
-<blockquote>
-<p>兼容Html语法， 标题逐渐变小: &lt;h1&gt;-&lt;h5&gt;<br>
-Markdwon情法， 标题逐新变小:</p>
-<h1 id=""></h1>
-<h2 id="-2"></h2>
-<h3 id="-3"></h3>
-<h4 id="-4"></h4>
-<h5 id="-5"></h5>
-</blockquote>
-<h1>月夜与客饮酒杏花下</h1>
-<h5>宋代:苏轼</h5>
-<hr>
-<p>##2.换行</p>
-<blockquote>
-<p>&lt;br/&gt;</p>
-</blockquote>
-<hr>
-<p>##3.字体样式</p>
-<blockquote>
-<p>*content*斜体<br>
-**content*<em>粗体<br>
-*<strong>content</strong></em>粗斜体</p>
-</blockquote>
-<hr>
-<p>##4.分割线<br>
----<br>
-***</p>
-<hr>
-<p>##5.划掉线<br>
-<s>划掉文字</s></p>
-<hr>
-<p>##6.下划线<br>
-<u>下划文字</u></p>
-<hr>
-<p>##7.无序列表</p>
-<ul>
-<li>无序列表</li>
-</ul>
-<ul>
-<li>无序列表</li>
-</ul>
-<ul>
-<li>
-<p>无序列表</p>
-<hr>
-</li>
-</ul>
-<p>##8.有序列表</p>
-<ol>
-<li>
-<p>第一列</p>
-</li>
-<li>
-<p>第二列</p>
-<hr>
-</li>
-</ol>
-<p>##9.嵌套模块</p>
-<blockquote>
-<p>第一层</p>
-<blockquote>
-<p>第二层</p>
-<blockquote>
-<p>第三层</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<hr>
-<p>##10.链接<br>
-直接显示链接: <a href="https://www.baidu.com">https://www.baidu.com</a><br>
-隐藏链接: <a href="https://www.baidu.com">百度</a></p>
-<hr>
-<p>##11.图片<br>
-<img src="https://photos-1258928558.cos.ap-guangzhou.myqcloud.com/avatar_1591965590089.jpeg" alt="头像" loading="lazy"></p>
-<hr>
-<p>##12.表格</p>
-<table>
-<thead>
-<tr>
-<th>表头</th>
-<th>表头</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-<tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<p>##13.<a href="https://www.runoob.com/markdown/md-tutorial.html">markdown语法链接</a></p>
+<p>⑤删除顺序表中所有重复的值，使得表中所有元素的值均不相同。</p>
+<pre><code>	//删除顺序表中的重复元素
+	public void deleteSame2() {
+		
+		int[] arr=new int[23];
+		for (int i = 0; i &lt; len; i++) {
+			arr[data[i]]++;
+		}
+		
+		System.out.println();
+		for (int i = 0; i &lt; arr.length; i++) {
+			if(arr[i]!=0)
+				System.out.print(i+&quot; &quot;);
+		}
+		
+	}
+</code></pre>
+<h1 id="单链表">单链表</h1>
+<p>定义：线性表的链式存储又称单链表。它是指通过一组<strong>任意</strong>的存储单元来存储线性表中的数据元素。</p>
+<p>弱点：由于单链表的元素离散的分布在存储空间中，所以单链表是一种非随机存取得存储结构。即不能直接找到表中某个特定的结点。</p>
 
-        </div>
-        
-        <div class="prev-post">
-            上一篇
-            <a href="https://VincentZ007.github.io/post/bi-ji-20200615/">
-                笔记-2020/06/15
-            </a>
         </div>
         
         
         <div class="next-post">
             下一篇
-            <a href="https://VincentZ007.github.io/post/bi-ji-20200610/">
-                笔记-2020/06/10
+            <a href="https://VincentZ007.github.io/post/bi-ji-20200617/">
+                笔记-2020/06/17
             </a>
         </div>
         
