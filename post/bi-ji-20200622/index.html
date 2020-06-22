@@ -1,14 +1,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="##老师发的
+    <meta name="description" content="建立单链表
 
-添加Valine评论系统：在主题/config.json中修改添加Valine相关源码；
+尾插法建立单链表
 
-
-①在主题/templates/includes/中引入valine.ejs
-②在主题/templates/post.ejs中引入
-..." />
+public LinkList TailBuildList(int[] arr) {
+		LinkList tail = new LinkList();
+		tail.data = arr[0];
+		ta..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://VincentZ007.github.io//media/css/bootstrap.min.css">
     
@@ -324,10 +324,10 @@
         <div class="postshow">
             
             <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
-                <img src="https://VincentZ007.github.io//post-images/bi-ji-20200610.jpg" class="postimage" style="cursor:auto">
+                <img src="https://VincentZ007.github.io//post-images/bi-ji-20200622.jpg" class="postimage" style="cursor:auto">
             </div>
             <div class="postinfo">
-                <div class="postdate"><i class="fa fa-calendar"></i>2020-06-11</div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-06-23</div>
                 <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
                 <div class="posttag">
                     
@@ -335,51 +335,95 @@
             </div>
             
         <div id="texttitle" style="text-align: center">
-            <h2>笔记-2020/06/10</h2>
+            <h2>笔记-2020/06/22</h2>
             <!-- id 将作为查询条件 -->
-            <div id="pl" style="display:none">https://VincentZ007.github.io/post/bi-ji-20200610/</div>
+            <div id="pl" style="display:none">https://VincentZ007.github.io/post/bi-ji-20200622/</div>
             <div id="rootaddr" style="display:none">https://VincentZ007.github.io/</div>
-            <span id="hotnum" class="leancloud_visitors" data-flag-title="笔记-2020/06/10">
+            <span id="hotnum" class="leancloud_visitors" data-flag-title="笔记-2020/06/22">
                 <h4 class="readercount">热度🔥: <i class="leancloud-visitors-count">loading...</i></h4>
             </span>
         </div>
         <div class="text ">
-            <p>##老师发的</p>
+            <h1 id="建立单链表">建立单链表</h1>
 <ol>
-<li>添加Valine评论系统：在主题/config.json中修改添加Valine相关源码；</li>
-<li></li>
+<li>尾插法建立单链表</li>
 </ol>
-<p>①在主题/templates/includes/中引入valine.ejs<br>
-②在主题/templates/post.ejs中引入<br>
-&lt;% if(typeof site.customConfig['valine']!=='undefined' &amp;&amp; site.customConfig['valine']) { %&gt;<br>
-&lt;%- include('./includes/valine') %&gt;<br>
-&lt;% } %&gt;<br>
-3. Valine评论系统简介：https://valine.js.org/；<br>
-4. Valine注册使用：https://github.com/DesertsP/Valine-Admin；<br>
-5. Valine邮件绑定；使用教程https://www.antmoe.com/posts/2380732b/index.html<br>
-6. 添加百度统计功能https://tongji.baidu.com/web/welcome/login<br>
-教程https://kily-007.github.io/post/gridea-tian-jia-bai-du-tong-ji/</p>
-<p>##笔记<br>
-今天学习了给博客添加留言功能。<br>
-这节课我先是注册了Valine账号（国际版），然后在Valine中创建了项目，添加了许多的环境变量：<br>
-<img src="https://VincentZ007.github.io//post-images/1591783308001.png" alt="" loading="lazy"><br>
-之后要在Gridea上添加留言功能，最开始的时候我选择的主题并没有自带Valine评论配置，所以就弄了半天，最后还是选择换了一个带Valine评论配置主题。<br>
-然后需要用Hbuilder来修改一些源代码，添加一个单独的留言页，最终也是成功完成了。</p>
+<pre><code>public LinkList TailBuildList(int[] arr) {
+		LinkList tail = new LinkList();
+		tail.data = arr[0];
+		tail.next = null;
+		LinkList r=tail;
+		int count=0;
+		while (count&lt;arr.length) {
+			LinkList p = new LinkList();
+			p.data = arr[count];
+			p.next = null; 
+			r.next=p;
+			r=p;
+			count++;
+	    }
+	return tail;
+	}
+</code></pre>
+<ol start="2">
+<li>头插法建立单链表</li>
+</ol>
+<pre><code>public LinkList HeadBuildList(int[] arr) {
+		LinkList head = new LinkList();
+		head.data = arr[0];
+		head.next = null;
+		int count=0;
+		while (count&lt;arr.length) {
+			LinkList p=new LinkList();
+			p.data=1;
+			p.next=head.next;
+			head.next=p;
+			count++;
+		}
+		return head;
+	}
+</code></pre>
+<hr>
+<h1 id="单链表的操作">单链表的操作</h1>
+<ol>
+<li>插入</li>
+</ol>
+<pre><code>public LinkList insert(LinkList list,int position,int number) {
+		LinkList p=list;
+		LinkList q=new LinkList();
+		int a=0;
+		q.data=number;
+		while(a&lt;position-1) {
+			p=p.next;
+			a++;
+		}
+		q.next=p.next;
+		p.next=q;
+		return list;
+	}
+</code></pre>
+<ol start="2">
+<li>删除</li>
+</ol>
+<pre><code>public LinkList delete(LinkList list,int position) {
+		LinkList p=list;
+		int a=0;
+		while(a&lt;position-1) {
+			p=p.next;
+			a++;
+		}
+		p.next=p.next.next;
+		return list;
+	}
+</code></pre>
 
-        </div>
-        
-        <div class="prev-post">
-            上一篇
-            <a href="https://VincentZ007.github.io/post/bi-ji-2020614/">
-                笔记-2020/6/14
-            </a>
         </div>
         
         
         <div class="next-post">
             下一篇
-            <a href="https://VincentZ007.github.io/post/bi-ji-20200608/">
-                笔记-2020/06/08
+            <a href="https://VincentZ007.github.io/post/bi-ji-20200620/">
+                笔记-2020/06/20
             </a>
         </div>
         
@@ -511,7 +555,11 @@ var _hmt = _hmt || [];
                     </div>
                 </div>
                 <div class="toc-container">
-                    
+                    <ul class="markdownIt-TOC">
+<li><a href="#%E5%BB%BA%E7%AB%8B%E5%8D%95%E9%93%BE%E8%A1%A8">建立单链表</a></li>
+<li><a href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E6%93%8D%E4%BD%9C">单链表的操作</a></li>
+</ul>
+
                 </div>
             </div>
         </div>
@@ -638,10 +686,10 @@ var _hmt = _hmt || [];
         <div class="postshow">
             
             <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
-                <img src="https://VincentZ007.github.io//post-images/bi-ji-20200610.jpg" class="postimage" style="cursor:auto">
+                <img src="https://VincentZ007.github.io//post-images/bi-ji-20200622.jpg" class="postimage" style="cursor:auto">
             </div>
             <div class="postinfo">
-                <div class="postdate"><i class="fa fa-calendar"></i>2020-06-11</div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-06-23</div>
                 <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
                 <div class="posttag">
                     
@@ -649,51 +697,95 @@ var _hmt = _hmt || [];
             </div>
             
         <div id="texttitle" style="text-align: center">
-            <h2>笔记-2020/06/10</h2>
+            <h2>笔记-2020/06/22</h2>
             <!-- id 将作为查询条件 -->
-            <div id="pl" style="display:none">https://VincentZ007.github.io/post/bi-ji-20200610/</div>
+            <div id="pl" style="display:none">https://VincentZ007.github.io/post/bi-ji-20200622/</div>
             <div id="rootaddr" style="display:none">https://VincentZ007.github.io/</div>
-            <span id="hotnum" class="leancloud_visitors" data-flag-title="笔记-2020/06/10">
+            <span id="hotnum" class="leancloud_visitors" data-flag-title="笔记-2020/06/22">
                 <h4 class="readercount">热度🔥: <i class="leancloud-visitors-count">loading...</i></h4>
             </span>
         </div>
         <div class="text ">
-            <p>##老师发的</p>
+            <h1 id="建立单链表">建立单链表</h1>
 <ol>
-<li>添加Valine评论系统：在主题/config.json中修改添加Valine相关源码；</li>
-<li></li>
+<li>尾插法建立单链表</li>
 </ol>
-<p>①在主题/templates/includes/中引入valine.ejs<br>
-②在主题/templates/post.ejs中引入<br>
-&lt;% if(typeof site.customConfig['valine']!=='undefined' &amp;&amp; site.customConfig['valine']) { %&gt;<br>
-&lt;%- include('./includes/valine') %&gt;<br>
-&lt;% } %&gt;<br>
-3. Valine评论系统简介：https://valine.js.org/；<br>
-4. Valine注册使用：https://github.com/DesertsP/Valine-Admin；<br>
-5. Valine邮件绑定；使用教程https://www.antmoe.com/posts/2380732b/index.html<br>
-6. 添加百度统计功能https://tongji.baidu.com/web/welcome/login<br>
-教程https://kily-007.github.io/post/gridea-tian-jia-bai-du-tong-ji/</p>
-<p>##笔记<br>
-今天学习了给博客添加留言功能。<br>
-这节课我先是注册了Valine账号（国际版），然后在Valine中创建了项目，添加了许多的环境变量：<br>
-<img src="https://VincentZ007.github.io//post-images/1591783308001.png" alt="" loading="lazy"><br>
-之后要在Gridea上添加留言功能，最开始的时候我选择的主题并没有自带Valine评论配置，所以就弄了半天，最后还是选择换了一个带Valine评论配置主题。<br>
-然后需要用Hbuilder来修改一些源代码，添加一个单独的留言页，最终也是成功完成了。</p>
+<pre><code>public LinkList TailBuildList(int[] arr) {
+		LinkList tail = new LinkList();
+		tail.data = arr[0];
+		tail.next = null;
+		LinkList r=tail;
+		int count=0;
+		while (count&lt;arr.length) {
+			LinkList p = new LinkList();
+			p.data = arr[count];
+			p.next = null; 
+			r.next=p;
+			r=p;
+			count++;
+	    }
+	return tail;
+	}
+</code></pre>
+<ol start="2">
+<li>头插法建立单链表</li>
+</ol>
+<pre><code>public LinkList HeadBuildList(int[] arr) {
+		LinkList head = new LinkList();
+		head.data = arr[0];
+		head.next = null;
+		int count=0;
+		while (count&lt;arr.length) {
+			LinkList p=new LinkList();
+			p.data=1;
+			p.next=head.next;
+			head.next=p;
+			count++;
+		}
+		return head;
+	}
+</code></pre>
+<hr>
+<h1 id="单链表的操作">单链表的操作</h1>
+<ol>
+<li>插入</li>
+</ol>
+<pre><code>public LinkList insert(LinkList list,int position,int number) {
+		LinkList p=list;
+		LinkList q=new LinkList();
+		int a=0;
+		q.data=number;
+		while(a&lt;position-1) {
+			p=p.next;
+			a++;
+		}
+		q.next=p.next;
+		p.next=q;
+		return list;
+	}
+</code></pre>
+<ol start="2">
+<li>删除</li>
+</ol>
+<pre><code>public LinkList delete(LinkList list,int position) {
+		LinkList p=list;
+		int a=0;
+		while(a&lt;position-1) {
+			p=p.next;
+			a++;
+		}
+		p.next=p.next.next;
+		return list;
+	}
+</code></pre>
 
-        </div>
-        
-        <div class="prev-post">
-            上一篇
-            <a href="https://VincentZ007.github.io/post/bi-ji-2020614/">
-                笔记-2020/6/14
-            </a>
         </div>
         
         
         <div class="next-post">
             下一篇
-            <a href="https://VincentZ007.github.io/post/bi-ji-20200608/">
-                笔记-2020/06/08
+            <a href="https://VincentZ007.github.io/post/bi-ji-20200620/">
+                笔记-2020/06/20
             </a>
         </div>
         

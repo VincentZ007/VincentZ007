@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://VincentZ007.github.io/</id>
     <title>Vincent&apos;s Blog</title>
-    <updated>2020-06-22T09:14:14.879Z</updated>
+    <updated>2020-06-22T09:17:16.259Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://VincentZ007.github.io/"/>
     <link rel="self" href="https://VincentZ007.github.io/atom.xml"/>
@@ -10,6 +10,86 @@
     <logo>https://VincentZ007.github.io/images/avatar.png</logo>
     <icon>https://VincentZ007.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Vincent&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[笔记-2020/06/22]]></title>
+        <id>https://VincentZ007.github.io/post/bi-ji-20200622/</id>
+        <link href="https://VincentZ007.github.io/post/bi-ji-20200622/">
+        </link>
+        <updated>2020-06-22T15:09:02.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="建立单链表">建立单链表</h1>
+<ol>
+<li>尾插法建立单链表</li>
+</ol>
+<pre><code>public LinkList TailBuildList(int[] arr) {
+		LinkList tail = new LinkList();
+		tail.data = arr[0];
+		tail.next = null;
+		LinkList r=tail;
+		int count=0;
+		while (count&lt;arr.length) {
+			LinkList p = new LinkList();
+			p.data = arr[count];
+			p.next = null; 
+			r.next=p;
+			r=p;
+			count++;
+	    }
+	return tail;
+	}
+</code></pre>
+<ol start="2">
+<li>头插法建立单链表</li>
+</ol>
+<pre><code>public LinkList HeadBuildList(int[] arr) {
+		LinkList head = new LinkList();
+		head.data = arr[0];
+		head.next = null;
+		int count=0;
+		while (count&lt;arr.length) {
+			LinkList p=new LinkList();
+			p.data=1;
+			p.next=head.next;
+			head.next=p;
+			count++;
+		}
+		return head;
+	}
+</code></pre>
+<hr>
+<h1 id="单链表的操作">单链表的操作</h1>
+<ol>
+<li>插入</li>
+</ol>
+<pre><code>public LinkList insert(LinkList list,int position,int number) {
+		LinkList p=list;
+		LinkList q=new LinkList();
+		int a=0;
+		q.data=number;
+		while(a&lt;position-1) {
+			p=p.next;
+			a++;
+		}
+		q.next=p.next;
+		p.next=q;
+		return list;
+	}
+</code></pre>
+<ol start="2">
+<li>删除</li>
+</ol>
+<pre><code>public LinkList delete(LinkList list,int position) {
+		LinkList p=list;
+		int a=0;
+		while(a&lt;position-1) {
+			p=p.next;
+			a++;
+		}
+		p.next=p.next.next;
+		return list;
+	}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[笔记-2020/06/20]]></title>
         <id>https://VincentZ007.github.io/post/bi-ji-20200620/</id>
