@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://VincentZ007.github.io/</id>
     <title>Vincent&apos;s Blog</title>
-    <updated>2020-07-08T06:07:13.827Z</updated>
+    <updated>2020-07-08T06:07:52.962Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://VincentZ007.github.io/"/>
     <link rel="self" href="https://VincentZ007.github.io/atom.xml"/>
@@ -10,6 +10,77 @@
     <logo>https://VincentZ007.github.io/images/avatar.png</logo>
     <icon>https://VincentZ007.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Vincent&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[笔记-2020/07/08]]></title>
+        <id>https://VincentZ007.github.io/post/bi-ji-20200708/</id>
+        <link href="https://VincentZ007.github.io/post/bi-ji-20200708/">
+        </link>
+        <updated>2020-07-08T08:10:52.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="双链表">双链表</h1>
+<p>说明：单链表结点中只有一个指向其后继的指针，使得单链表只能从头结点依次顺序地向后访问。为了克服单链表只能从前往后的访问的缺陷，引入prior指针，使得链表可以向前访问。<br>
+结构示意图：<br>
+<img src="https://VincentZ007.github.io//post-images/1594188305261.png" alt="" loading="lazy"></p>
+<h1 id="建表">建表</h1>
+<pre><code>//尾插法建表
+public DLinkList buildDLinkList(int[] arr) {
+		DLinkList head = new DLinkList();
+		head.next = null;
+		head.prior = null;
+		head.data = 0;
+		DLinkList r = head;
+		int count = 0;
+		while (count &lt; arr.length) {
+			DLinkList p = new DLinkList();
+			p.data = arr[count++];
+			p.next = r.next;
+			p.prior = r;
+			r.next = p;
+			r = p;
+		}
+		return head;
+	}
+</code></pre>
+<h1 id="插入删除">插入删除</h1>
+<figure data-type="image" tabindex="1"><img src="https://VincentZ007.github.io//post-images/1594188336720.png" alt="" loading="lazy"></figure>
+<pre><code>    //插入
+	public DLinkList insert(DLinkList head,int posi,int value) {
+		DLinkList p=head.next;
+		int count=0;
+		while (count&lt;posi) {
+			p=p.next;
+			count++;
+		}
+		DLinkList q=new DLinkList();
+		q.data=value;
+		q.next=p.next;
+		q.prior=p;
+		p.next.prior=q;
+		p.next=q;
+		return head;
+	}
+
+    //删除
+    	public DLinkList delete(DLinkList head,int posi) {
+		DLinkList p=head;
+		int count=0;
+		while (count&lt;posi) {
+			p=p.next;
+			count++;
+		}
+		p.next.next.prior=p;
+		p.next=p.next.next;
+		return head;
+	}
+</code></pre>
+<h1 id="循环链表">循环链表</h1>
+<h2 id="循环单链表">循环单链表</h2>
+<figure data-type="image" tabindex="2"><img src="https://VincentZ007.github.io//post-images/1594188344719.png" alt="" loading="lazy"></figure>
+<h2 id="循环双链表">循环双链表</h2>
+<figure data-type="image" tabindex="3"><img src="https://VincentZ007.github.io//post-images/1594188351671.png" alt="" loading="lazy"></figure>
+<h2 id="静态链表">静态链表</h2>
+<figure data-type="image" tabindex="4"><img src="https://VincentZ007.github.io//post-images/1594188385094.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[笔记-2020/06/24]]></title>
         <id>https://VincentZ007.github.io/post/bi-ji-20200624/</id>
@@ -589,38 +660,6 @@ Markdwon情法， 标题逐新变小:</p>
 <p>编程做游戏，弹琴</p>
 <h2 id="联系我呀">📬 联系我呀</h2>
 <p>QQ邮箱：2650635962@qq.com</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://VincentZ007.github.io/post/hello-gridea/</id>
-        <link href="https://VincentZ007.github.io/post/hello-gridea/">
-        </link>
-        <updated>2018-12-11T22:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
 ]]></content>
     </entry>
 </feed>

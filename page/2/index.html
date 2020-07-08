@@ -1,94 +1,12 @@
-<!DOCTYPE html>
-<html lang="zh-han">
-<style>
-    @keyframes fade-in {
-        0% {
-            opacity: 0;
-        }
-
-        /*初始状态 透明度为0*/
-        40% {
-            opacity: 0;
-        }
-
-        /*过渡状态 透明度为0*/
-        100% {
-            opacity: 1;
-        }
-
-        /*结束状态 透明度为1*/
-    }
-
-    @-webkit-keyframes fade-in {
-
-        /*针对webkit内核*/
-        0% {
-            opacity: 0;
-        }
-
-        40% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-    .tags-container {
-        min-height: 100vh;
-        background: white;
-        position: absolute;
-        padding-bottom: 70px;
-        animation: fade-in;
-        /*动画名称*/
-        animation-duration: 1s;
-        /*动画持续时间*/
-        -webkit-animation: fade-in 1s;
-        /*针对webkit内核*/
-    }
-
-    .tagintro {
-        padding-top: 2%;
-        padding-left: 5%;
-        font-size: 2em;
-        font-weight: bold;
-        text-align: left;
-    }
-
-    .tag {
-        display: inline;
-        float: left;
-        width: 15%;
-        margin-left: 2%;
-        margin-top: 5%;
-        margin-right: 2%;
-        border: solid;
-        border-radius: 7px;
-        padding: 5px;
-        color: #3cdc82;
-        font-size: 1.2em;
-    }
-
-    .tagsimg {
-        width: 100%;
-    }
-
-    @media screen and (max-width: 1300px) {
-        .tag {
-            width: 80%;
-        }
-    }
-</style>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://VincentZ007.github.io//media/css/live2d.css">
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://VincentZ007.github.io//media/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://VincentZ007.github.io//media/css/live2d.css">
+    <meta name="description" content="？？？？？？？？？？？？？？？？？？" />
     <title>Vincent's Blog</title>
 </head>
 
@@ -375,16 +293,89 @@
             alert("博主暂未设置QQ联系方式");
     }
 </script></div>
+                <div id="tab1" class="tab">
+                    <div class="bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="close"></div>
+                </div>
                 <div id="main" class="col-xs-12 col-sm-7">
-                    <div class="tags-container">
-                        
-                        <img class="tagsimg" src="" alt="">
-                        
-                        
-                        <a class="tag" href="https://VincentZ007.github.io/tag/5PbALqt8X/"># 笔记</a>
-                        
-                        <a class="tag" href="https://VincentZ007.github.io/tag/eywTZE1UY/"># Gridea</a>
-                        
+                    <link rel="stylesheet" href="https://VincentZ007.github.io//media/css/font-awesome.css">
+<div id="post-container">
+    
+    <div class="postshow">
+        
+        <div id="post" style="width:100%">
+            <img src="https://VincentZ007.github.io//post-images/hello-gridea.png" class="postimage"
+                onclick="window.location.href= 'https://VincentZ007.github.io/post/hello-gridea/';return false">
+            <div class="posttitlebox">
+                <div class="posttitle" onclick="window.location.href= 'https://VincentZ007.github.io/post/hello-gridea/';return false">
+                    Hello Gridea
+                </div>
+            </div>
+        </div>
+        <div class="postinfo">
+            <div class="postdate"><i class="fa fa-calendar"></i>2018-12-12</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
+            <div class="posttag">
+                
+                <a href="https://VincentZ007.github.io/tag/eywTZE1UY/" class="postlink">
+                    <i class="fa fa-tag"></i> Gridea
+                </a>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+                    <div>
+                        <div class="pagi">
+    <ul>
+        
+        <li><a href="https://VincentZ007.github.io/" style="width:100px" id="prev">上一页</a></li>
+        
+                <li><a id="page1">1</a></li>
+                <li><a id="page2" class="active">2</a></li>
+                <li><a id="page3">3</a></li>
+                
+        <li><a style="width:100px">&nbsp;</a></li>
+        
+            </ul>
+</div>
+
+<div id="pagination-prev" style="display:none"> https://VincentZ007.github.io/
+</div>
+<div id="pagination-next" style="display:none"> </div>
+
+
+<script>
+    var prevstr = document.getElementById("pagination-prev").innerHTML;
+    var nextstr = document.getElementById("pagination-next").innerHTML;
+    var page1 = document.getElementById("page1");
+    var page2 = document.getElementById("page2");
+    var page3 = document.getElementById("page3");
+    page1.innerHTML = '-';
+    page2.innerHTML = '1';
+    page3.innerHTML = '-';
+    if (prevstr.length > 5) {
+        if (prevstr.indexOf("page/") != -1) {
+            var prevnum = parseInt(prevstr.split("page/")[1]);
+            page1.innerHTML = prevnum;
+            page2.innerHTML = prevnum + 1;
+        } else {
+            page1.innerHTML = 1;
+            page2.innerHTML = 2;
+        }
+    }
+    if (nextstr.indexOf("page/") != -1) {
+        var nextnum = parseInt(nextstr.split("page/")[1]);
+        page3.innerHTML = nextnum;
+        page2.innerHTML = nextnum - 1;
+    }
+</script>
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-2"></div>
@@ -395,9 +386,8 @@
         <div id="bgchoice" style="display: none"></div>
         
         <div id="bgurl" style="display:none"></div>
-           
+            
     </div>
-
     <!-- 响应式布局，针对手机端内容显示 -->
     <div class="nav-small">
         <head>
@@ -498,39 +488,161 @@
   })();
   </script>
 </body>
-        <div style="margin-top:50px"></div>
-        <div class="tags-container">
+        <!-- 移动端欢迎页 -->
+<div class="welcome">
+    <div class="avatar-border">
+        <img src="https://VincentZ007.github.io//images/avatar.png?v=1594188437863" class="avatar">
+    </div>
+    <span class="mobiledescribtion"></span>
+</div>
+
+    <div id="mobilebgurl" style="display:none"></div>
+
+<script>
+    var welcome = $('.welcome');
+    var bgurl = document.getElementById("mobilebgurl").innerHTML;
+    for (var i = 0; i < 3; i++)
+        bgurl = bgurl.replace("\\", "/");
+    welcome.css("background", "url('" + bgurl + "')");
+    var mobiledes = document.querySelector(".mobiledescribtion");
+    var text = "？？？？？？？？？？？？？？？？？？";
+    // 当前显示第几个字
+    var mobilecharIndex = 1;
+    // 每个字显示间隔默认是500毫秒
+    var mobiledelta = 500;
+
+    // 记录动画执行开始时间
+    var mobilestart = null;
+    // 是否为删除动画
+    var mobileisDeleting = false;
+
+    // 动画回调函数
+    function mobileLoadDes(time) {
+        window.requestAnimationFrame(mobileLoadDes);
+        // 初始化开始时间
+        if (!mobilestart) start = time;
+        // 获取时间间隔
+        var mobileprogress = time - mobilestart;
+        // 每隔一定的时间，打印出一个新的字符
+        if (mobileprogress > mobiledelta) {
+            // 如果是打字效果
+            if (!mobileisDeleting) {
+                // 给展示文字的span新增一个字符，使用innerHTML来替换，charIndex自增1，然后返回新的字符串子串
+                mobiledes.innerHTML = "&nbsp;" + text.slice(
+                    0,
+                    ++mobilecharIndex
+                );
+                mobiledelta = 500 - Math.random() * 400;
+            } else {
+                // 如果是删除效果，则把文字一个一个减掉
+                mobiledes.innerHTML = "&nbsp;" + text.slice(
+                    0,
+                    mobilecharIndex--
+                );
+            }
+            // 把star更新为当前时间，进行下一个周期
+            mobilestart = time;
+
+            // 如果文字已经全部打印完毕
+            if (mobilecharIndex === text.length) {
+                // 下次开始删除文字
+                mobileisDeleting = true;
+                // 删除文字的间隔为200毫秒
+                mobiledelta = 100;
+                // 额外等待1.2秒后再删除
+                mobilestart = time + 1000;
+            }
+
+            // 如果文字删除完毕
+            if (mobilecharIndex < 0) {
+                mobileisDeleting = false;
+                // 额外增加200毫秒延迟
+                mobilestart = time + 200;
+            }
+        }
+    }
+
+    window.requestAnimationFrame(mobileLoadDes);
+</script>
+        <link rel="stylesheet" href="https://VincentZ007.github.io//media/css/font-awesome.css">
+<div id="post-container">
+    
+    <div class="postshow">
+        
+        <div id="post" style="width:100%">
+            <img src="https://VincentZ007.github.io//post-images/hello-gridea.png" class="postimage"
+                onclick="window.location.href= 'https://VincentZ007.github.io/post/hello-gridea/';return false">
+            <div class="posttitlebox">
+                <div class="posttitle" onclick="window.location.href= 'https://VincentZ007.github.io/post/hello-gridea/';return false">
+                    Hello Gridea
+                </div>
+            </div>
+        </div>
+        <div class="postinfo">
+            <div class="postdate"><i class="fa fa-calendar"></i>2018-12-12</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
+            <div class="posttag">
+                
+                <a href="https://VincentZ007.github.io/tag/eywTZE1UY/" class="postlink">
+                    <i class="fa fa-tag"></i> Gridea
+                </a>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+        <div class="pagination-container">
             
-            <img class="tagsimg" src="" alt="">
+            <a href="https://VincentZ007.github.io/" class="mobile-prevpage">上一页</a>
             
-            
-            <a class="tag" href="https://VincentZ007.github.io/tag/5PbALqt8X/"># 笔记</a>
-            
-            <a class="tag" href="https://VincentZ007.github.io/tag/eywTZE1UY/"># Gridea</a>
             
         </div>
+        <div style="margin-bottom:60px">&nbsp;</div>
     </div>
-    <div id="landlord">
-        <div class="message" style="opacity:0"></div>
-        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
-    </div>
+
+<div id="landlord">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+</div>
 </body>
 
 </html>
 <script src="https://VincentZ007.github.io//media/js/index.js"></script>
-<script>
-    $(".tag").each(function () {
-        var rgb = '#' + Math.floor(Math.random() * 0xffffff).toString(16);;
-        $(this).css('color', rgb);
-    });
-</script>
 
 <script type="text/javascript">
     var message_Path = '/live2d/'
-    var home_Path = 'http://ericam.top/' //此处修改为你的域名，必须带斜杠
+    var home_Path = 'http://ericam.top/'  //此处修改为你的域名，必须带斜杠
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4c714df6f978e0f7ed4540dba5cac1d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
 </script>
 <script type="text/javascript" src="https://VincentZ007.github.io//media/live2d/js/live2d.js"></script>
 <script type="text/javascript" src="https://VincentZ007.github.io//media/live2d/js/message.js"></script>
 <script type="text/javascript">
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?4c714df6f978e0f7ed4540dba5cac1d4";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
     loadlive2d("live2d", "https://VincentZ007.github.io//media/live2d/assets/tororo.model.json");
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4c714df6f978e0f7ed4540dba5cac1d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
 </script>
