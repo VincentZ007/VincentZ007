@@ -1,13 +1,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="单链表的各种函数
-获取单链表长度
-public int findLength(LinkList list) {
-		int count=0;
-		while(true){
-			count++;
-			if(list.next==null)..." />
+    <meta name="description" content="顺序表与链表的比较
+
+存取方式
+顺序表可以顺序存取也可以随机存取，
+链表只能从表头顺序存取元素。
+逻辑结构与物理结构
+采用顺序存储时，逻辑上相邻的元素，对应的物理存储位置也相邻。
+采用链式存储时，逻辑上相邻的元素，对应的物理存储位置不一定相..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://VincentZ007.github.io//media/css/bootstrap.min.css">
     
@@ -323,130 +324,65 @@ public int findLength(LinkList list) {
         <div class="postshow">
             
             <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
-                <img src="https://VincentZ007.github.io//post-images/bi-ji-20200624.jpeg" class="postimage" style="cursor:auto">
+                
+                <img src="" class="postimage">
+                
             </div>
             <div class="postinfo">
-                <div class="postdate"><i class="fa fa-calendar"></i>2020-06-25</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
-                <div class="posttag">
-                    
-                </div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-07-18</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
+            <div class="posttag">
+                
             </div>
-            
+        </div>
+        
         <div id="texttitle" style="text-align: center">
-            <h2>笔记-2020/06/24</h2>
+            <h2>笔记-2020/07/18</h2>
             <!-- id 将作为查询条件 -->
-            <div id="pl" style="display:none">https://VincentZ007.github.io/post/bi-ji-20200624/</div>
+            <div id="pl" style="display:none">https://VincentZ007.github.io/post/bi-ji-20200718/</div>
             <div id="rootaddr" style="display:none">https://VincentZ007.github.io/</div>
-            <span id="hotnum" class="leancloud_visitors" data-flag-title="笔记-2020/06/24">
+            <span id="hotnum" class="leancloud_visitors" data-flag-title="笔记-2020/07/18">
                 <h4 class="readercount">热度🔥: <i class="leancloud-visitors-count">loading...</i></h4>
             </span>
         </div>
         <div class="text ">
-            <h1 id="单链表的各种函数">单链表的各种函数</h1>
-<h3 id="获取单链表长度">获取单链表长度</h3>
-<pre><code>public int findLength(LinkList list) {
-		int count=0;
-		while(true){
-			count++;
-			if(list.next==null)return count;
-			list=list.next;
-		}
-	}
+            <h1 id="顺序表与链表的比较">顺序表与链表的比较</h1>
+<ol>
+<li>存取方式<br>
+顺序表可以顺序存取<strong>也可以</strong>随机存取，<br>
+链表<strong>只能</strong>从表头顺序存取元素。</li>
+<li>逻辑结构与物理结构<br>
+采用顺序存储时，逻辑上相邻的元素，对应的物理存储位置<strong>也</strong>相邻。<br>
+采用链式存储时，逻辑上相邻的元素，对应的物理存储位置<strong>不一定</strong>相邻，逻辑关系是用<strong>指针</strong>来表示的。</li>
+<li>查找、插入和删除<br>
+| null | 顺序表 | 链表 |<br>
+| 查找 | O(n) | O(n) |<br>
+| 插入 | O(n) | O(1) |<br>
+| 删除 | O(n) | O(1) |</li>
+<li>空间分配<br>
+顺序表是静态空间分配，<br>
+链表是动态空间分配。</li>
+</ol>
+<h1 id="实际应用中表的选取">实际应用中表的选取</h1>
+<ol>
+<li>基于存储考虑<br>
+顺序表：可以估计线性表的长度或存储规模时采用。<br>
+链表：不用事先知道存储规模，但链表的存储密度低。</li>
+<li>基于运算考虑<br>
+顺序表：经常访问链表中的元素时使用。<br>
+链表：经常插入或者删除时使用。</li>
+<li>基于环境考虑<br>
+顺序表：直接采用数组，容易实现。<br>
+链表：基于指针实现，相对较为繁琐。</li>
+</ol>
 
-</code></pre>
-<h3 id="或">或</h3>
-<pre><code>	public int getLength(LinkList list) {
-		int count=-1;
-		while (list!=null) {
-			list=list.next;
-			count++;
-		}
-		return count;
-	}
-</code></pre>
-<h3 id="查找链表中第一个值为e的结点">查找链表中第一个值为e的结点</h3>
-<pre><code>public LinkList findEByValue(LinkList list,int e) {
-		while(list!=null) {
-			if(list.data==e) {
-				return list;
-			}
-			list=list.next;
-		}
-		return null;
-	}
-</code></pre>
-<h3 id="查找链表中第k个结点的值">查找链表中第k个结点的值</h3>
-<pre><code>public LinkList findEByNum(LinkList list,int k) {
-		if(getLength(list)&lt;k)
-			return null;
-		int count=0;
-		while (count&lt;k) {
-			list=list.next;
-			count++;
-		}
-		return list;
-	}
-</code></pre>
-<h3 id="颠倒单链表并输出">颠倒单链表并输出</h3>
-<pre><code>public void printReverseLinkList(LinkList list) {
-		LinkList head=list;
-		LinkList p=list.next;
-		LinkList q;
-		list.next=null;
-		while(p!=null) {
-			q=p.next;
-			p.next=head.next;
-			head.next=p;
-			p=q;
-		}
-		printLinkList(head);
-	}
-</code></pre>
-<h3 id="去掉单链表中重复的值并返回一个删去重复值的单链表">去掉单链表中重复的值，并返回一个删去重复值的单链表</h3>
-<pre><code>public LinkList deleteSame(LinkList list) {
-		list=list.next;
-		LinkList haha=new LinkList();
-		int j=0;
-		int len=getLength(list);
-		int lenxixi=0;
-		int[] arr=new int[100];
-		for (int i = 0; i &lt; len; i++) {
-			arr[list.data]++;
-			list=list.next;
-		}
-		System.out.println();
-		for (int i = 0; i &lt; arr.length; i++) {
-			if(arr[i]!=0) {
-				lenxixi++;
-			}
-		}
-		int[] xixi=new int[lenxixi];
-		for (int i = 0; i &lt; arr.length; i++) {
-			if(arr[i]!=0) {
-				xixi[j]=i;
-				j++;
-			}
-		}
-		haha = haha.TailBuildList(xixi);
-		return haha;
-	}
-</code></pre>
-
-        </div>
-        
-        <div class="prev-post">
-            上一篇
-            <a href="https://VincentZ007.github.io/post/bi-ji-20200708/">
-                笔记-2020/07/08
-            </a>
         </div>
         
         
         <div class="next-post">
             下一篇
-            <a href="https://VincentZ007.github.io/post/bi-ji-20200622/">
-                笔记-2020/06/22
+            <a href="https://VincentZ007.github.io/post/bi-ji-20200708/">
+                笔记-2020/07/08
             </a>
         </div>
         
@@ -579,17 +515,8 @@ var _hmt = _hmt || [];
                 </div>
                 <div class="toc-container">
                     <ul class="markdownIt-TOC">
-<li><a href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E5%90%84%E7%A7%8D%E5%87%BD%E6%95%B0">单链表的各种函数</a><br>
-*
-<ul>
-<li><a href="#%E8%8E%B7%E5%8F%96%E5%8D%95%E9%93%BE%E8%A1%A8%E9%95%BF%E5%BA%A6">获取单链表长度</a></li>
-<li><a href="#%E6%88%96">或</a></li>
-<li><a href="#%E6%9F%A5%E6%89%BE%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%80%BC%E4%B8%BAe%E7%9A%84%E7%BB%93%E7%82%B9">查找链表中第一个值为e的结点</a></li>
-<li><a href="#%E6%9F%A5%E6%89%BE%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%AC%ACk%E4%B8%AA%E7%BB%93%E7%82%B9%E7%9A%84%E5%80%BC">查找链表中第k个结点的值</a></li>
-<li><a href="#%E9%A2%A0%E5%80%92%E5%8D%95%E9%93%BE%E8%A1%A8%E5%B9%B6%E8%BE%93%E5%87%BA">颠倒单链表并输出</a></li>
-<li><a href="#%E5%8E%BB%E6%8E%89%E5%8D%95%E9%93%BE%E8%A1%A8%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E5%80%BC%E5%B9%B6%E8%BF%94%E5%9B%9E%E4%B8%80%E4%B8%AA%E5%88%A0%E5%8E%BB%E9%87%8D%E5%A4%8D%E5%80%BC%E7%9A%84%E5%8D%95%E9%93%BE%E8%A1%A8">去掉单链表中重复的值，并返回一个删去重复值的单链表</a></li>
-</ul>
-</li>
+<li><a href="#%E9%A1%BA%E5%BA%8F%E8%A1%A8%E4%B8%8E%E9%93%BE%E8%A1%A8%E7%9A%84%E6%AF%94%E8%BE%83">顺序表与链表的比较</a></li>
+<li><a href="#%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E4%B8%AD%E8%A1%A8%E7%9A%84%E9%80%89%E5%8F%96">实际应用中表的选取</a></li>
 </ul>
 
                 </div>
@@ -718,130 +645,65 @@ var _hmt = _hmt || [];
         <div class="postshow">
             
             <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
-                <img src="https://VincentZ007.github.io//post-images/bi-ji-20200624.jpeg" class="postimage" style="cursor:auto">
+                
+                <img src="" class="postimage">
+                
             </div>
             <div class="postinfo">
-                <div class="postdate"><i class="fa fa-calendar"></i>2020-06-25</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
-                <div class="posttag">
-                    
-                </div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-07-18</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
+            <div class="posttag">
+                
             </div>
-            
+        </div>
+        
         <div id="texttitle" style="text-align: center">
-            <h2>笔记-2020/06/24</h2>
+            <h2>笔记-2020/07/18</h2>
             <!-- id 将作为查询条件 -->
-            <div id="pl" style="display:none">https://VincentZ007.github.io/post/bi-ji-20200624/</div>
+            <div id="pl" style="display:none">https://VincentZ007.github.io/post/bi-ji-20200718/</div>
             <div id="rootaddr" style="display:none">https://VincentZ007.github.io/</div>
-            <span id="hotnum" class="leancloud_visitors" data-flag-title="笔记-2020/06/24">
+            <span id="hotnum" class="leancloud_visitors" data-flag-title="笔记-2020/07/18">
                 <h4 class="readercount">热度🔥: <i class="leancloud-visitors-count">loading...</i></h4>
             </span>
         </div>
         <div class="text ">
-            <h1 id="单链表的各种函数">单链表的各种函数</h1>
-<h3 id="获取单链表长度">获取单链表长度</h3>
-<pre><code>public int findLength(LinkList list) {
-		int count=0;
-		while(true){
-			count++;
-			if(list.next==null)return count;
-			list=list.next;
-		}
-	}
+            <h1 id="顺序表与链表的比较">顺序表与链表的比较</h1>
+<ol>
+<li>存取方式<br>
+顺序表可以顺序存取<strong>也可以</strong>随机存取，<br>
+链表<strong>只能</strong>从表头顺序存取元素。</li>
+<li>逻辑结构与物理结构<br>
+采用顺序存储时，逻辑上相邻的元素，对应的物理存储位置<strong>也</strong>相邻。<br>
+采用链式存储时，逻辑上相邻的元素，对应的物理存储位置<strong>不一定</strong>相邻，逻辑关系是用<strong>指针</strong>来表示的。</li>
+<li>查找、插入和删除<br>
+| null | 顺序表 | 链表 |<br>
+| 查找 | O(n) | O(n) |<br>
+| 插入 | O(n) | O(1) |<br>
+| 删除 | O(n) | O(1) |</li>
+<li>空间分配<br>
+顺序表是静态空间分配，<br>
+链表是动态空间分配。</li>
+</ol>
+<h1 id="实际应用中表的选取">实际应用中表的选取</h1>
+<ol>
+<li>基于存储考虑<br>
+顺序表：可以估计线性表的长度或存储规模时采用。<br>
+链表：不用事先知道存储规模，但链表的存储密度低。</li>
+<li>基于运算考虑<br>
+顺序表：经常访问链表中的元素时使用。<br>
+链表：经常插入或者删除时使用。</li>
+<li>基于环境考虑<br>
+顺序表：直接采用数组，容易实现。<br>
+链表：基于指针实现，相对较为繁琐。</li>
+</ol>
 
-</code></pre>
-<h3 id="或">或</h3>
-<pre><code>	public int getLength(LinkList list) {
-		int count=-1;
-		while (list!=null) {
-			list=list.next;
-			count++;
-		}
-		return count;
-	}
-</code></pre>
-<h3 id="查找链表中第一个值为e的结点">查找链表中第一个值为e的结点</h3>
-<pre><code>public LinkList findEByValue(LinkList list,int e) {
-		while(list!=null) {
-			if(list.data==e) {
-				return list;
-			}
-			list=list.next;
-		}
-		return null;
-	}
-</code></pre>
-<h3 id="查找链表中第k个结点的值">查找链表中第k个结点的值</h3>
-<pre><code>public LinkList findEByNum(LinkList list,int k) {
-		if(getLength(list)&lt;k)
-			return null;
-		int count=0;
-		while (count&lt;k) {
-			list=list.next;
-			count++;
-		}
-		return list;
-	}
-</code></pre>
-<h3 id="颠倒单链表并输出">颠倒单链表并输出</h3>
-<pre><code>public void printReverseLinkList(LinkList list) {
-		LinkList head=list;
-		LinkList p=list.next;
-		LinkList q;
-		list.next=null;
-		while(p!=null) {
-			q=p.next;
-			p.next=head.next;
-			head.next=p;
-			p=q;
-		}
-		printLinkList(head);
-	}
-</code></pre>
-<h3 id="去掉单链表中重复的值并返回一个删去重复值的单链表">去掉单链表中重复的值，并返回一个删去重复值的单链表</h3>
-<pre><code>public LinkList deleteSame(LinkList list) {
-		list=list.next;
-		LinkList haha=new LinkList();
-		int j=0;
-		int len=getLength(list);
-		int lenxixi=0;
-		int[] arr=new int[100];
-		for (int i = 0; i &lt; len; i++) {
-			arr[list.data]++;
-			list=list.next;
-		}
-		System.out.println();
-		for (int i = 0; i &lt; arr.length; i++) {
-			if(arr[i]!=0) {
-				lenxixi++;
-			}
-		}
-		int[] xixi=new int[lenxixi];
-		for (int i = 0; i &lt; arr.length; i++) {
-			if(arr[i]!=0) {
-				xixi[j]=i;
-				j++;
-			}
-		}
-		haha = haha.TailBuildList(xixi);
-		return haha;
-	}
-</code></pre>
-
-        </div>
-        
-        <div class="prev-post">
-            上一篇
-            <a href="https://VincentZ007.github.io/post/bi-ji-20200708/">
-                笔记-2020/07/08
-            </a>
         </div>
         
         
         <div class="next-post">
             下一篇
-            <a href="https://VincentZ007.github.io/post/bi-ji-20200622/">
-                笔记-2020/06/22
+            <a href="https://VincentZ007.github.io/post/bi-ji-20200708/">
+                笔记-2020/07/08
             </a>
         </div>
         

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://VincentZ007.github.io/</id>
     <title>Vincent&apos;s Blog</title>
-    <updated>2020-07-08T06:07:52.962Z</updated>
+    <updated>2020-07-18T05:58:22.149Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://VincentZ007.github.io/"/>
     <link rel="self" href="https://VincentZ007.github.io/atom.xml"/>
@@ -10,6 +10,43 @@
     <logo>https://VincentZ007.github.io/images/avatar.png</logo>
     <icon>https://VincentZ007.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Vincent&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[笔记-2020/07/18]]></title>
+        <id>https://VincentZ007.github.io/post/bi-ji-20200718/</id>
+        <link href="https://VincentZ007.github.io/post/bi-ji-20200718/">
+        </link>
+        <updated>2020-07-18T07:26:04.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="顺序表与链表的比较">顺序表与链表的比较</h1>
+<ol>
+<li>存取方式<br>
+顺序表可以顺序存取<strong>也可以</strong>随机存取，<br>
+链表<strong>只能</strong>从表头顺序存取元素。</li>
+<li>逻辑结构与物理结构<br>
+采用顺序存储时，逻辑上相邻的元素，对应的物理存储位置<strong>也</strong>相邻。<br>
+采用链式存储时，逻辑上相邻的元素，对应的物理存储位置<strong>不一定</strong>相邻，逻辑关系是用<strong>指针</strong>来表示的。</li>
+<li>查找、插入和删除<br>
+| null | 顺序表 | 链表 |<br>
+| 查找 | O(n) | O(n) |<br>
+| 插入 | O(n) | O(1) |<br>
+| 删除 | O(n) | O(1) |</li>
+<li>空间分配<br>
+顺序表是静态空间分配，<br>
+链表是动态空间分配。</li>
+</ol>
+<h1 id="实际应用中表的选取">实际应用中表的选取</h1>
+<ol>
+<li>基于存储考虑<br>
+顺序表：可以估计线性表的长度或存储规模时采用。<br>
+链表：不用事先知道存储规模，但链表的存储密度低。</li>
+<li>基于运算考虑<br>
+顺序表：经常访问链表中的元素时使用。<br>
+链表：经常插入或者删除时使用。</li>
+<li>基于环境考虑<br>
+顺序表：直接采用数组，容易实现。<br>
+链表：基于指针实现，相对较为繁琐。</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[笔记-2020/07/08]]></title>
         <id>https://VincentZ007.github.io/post/bi-ji-20200708/</id>
@@ -641,25 +678,6 @@ Markdwon情法， 标题逐新变小:</p>
 <ul>
 <li>撰写“关于”界面的博客，内容为自我介绍</li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于]]></title>
-        <id>https://VincentZ007.github.io/post/about/</id>
-        <link href="https://VincentZ007.github.io/post/about/">
-        </link>
-        <updated>2019-01-25T23:09:48.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<p>于2020/6/8创建, 是老师教我弄的，可以用来记笔记</p>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<p>一个高一学生，正在学习编程，以后想考计算机专业</p>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<p>编程做游戏，弹琴</p>
-<h2 id="联系我呀">📬 联系我呀</h2>
-<p>QQ邮箱：2650635962@qq.com</p>
 ]]></content>
     </entry>
 </feed>
