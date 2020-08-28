@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://VincentZ007.github.io/</id>
     <title>Vincent&apos;s Blog</title>
-    <updated>2020-08-28T02:01:19.293Z</updated>
+    <updated>2020-08-28T02:02:37.853Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://VincentZ007.github.io/"/>
     <link rel="self" href="https://VincentZ007.github.io/atom.xml"/>
@@ -10,6 +10,56 @@
     <logo>https://VincentZ007.github.io/images/avatar.png</logo>
     <icon>https://VincentZ007.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Vincent&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[力扣-机器人能否返回原点]]></title>
+        <id>https://VincentZ007.github.io/post/li-kou-ji-qi-ren-neng-fou-fan-hui-yuan-dian/</id>
+        <link href="https://VincentZ007.github.io/post/li-kou-ji-qi-ren-neng-fou-fan-hui-yuan-dian/">
+        </link>
+        <updated>2020-08-28T09:52:44.000Z</updated>
+        <content type="html"><![CDATA[<hr>
+<p>难度 <font color=#00FF00>简单</font></p>
+<p>在二维平面上，有一个机器人从原点 (0, 0) 开始。给出它的移动顺序，判断这个机器人在完成移动后是否在 (0, 0) 处结束。</p>
+<p>移动顺序由字符串表示。字符 move[i] 表示其第 i 次移动。机器人的有效动作有 R（右），L（左），U（上）和 D（下）。如果机器人在完成所有动作后返回原点，则返回 true。否则，返回 false。</p>
+<p>注意：机器人“面朝”的方向无关紧要。 “R” 将始终使机器人向右移动一次，“L” 将始终向左移动等。此外，假设每次移动机器人的移动幅度相同。</p>
+<hr>
+<p>示例 1:<br>
+输入: &quot;UD&quot;<br>
+输出: true<br>
+解释：机器人向上移动一次，然后向下移动一次。所有动作都具有相同的幅度，因此它最终回到它开始的原点。因此，我们返回 true。</p>
+<p>示例 2:<br>
+输入: &quot;LL&quot;<br>
+输出: false<br>
+解释：机器人向左移动两次。它最终位于原点的左侧，距原点有两次 “移动” 的距离。我们返回 false，因为它在移动结束时没有返回原点。</p>
+<hr>
+<p>解法：</p>
+<pre><code>class Solution {
+    public boolean judgeCircle(String moves) {
+        int ud=0,lr=0;
+        char [] temp = moves.toCharArray();
+        for(int i=0;i&lt;temp.length;i++){
+            if(temp[i]=='R')lr+=1;
+            else if(temp[i]=='L')lr-=1;
+            else if(temp[i]=='U')ud+=1;
+            else if(temp[i]=='D')ud-=1;
+        }
+        if(ud==0&amp;&amp;lr==0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+}
+</code></pre>
+<hr>
+<p>分析：<br>
+整体思路是用两个整数，一个记录上下，一个记录左右。<br>
+如果往右，左右的就加一，往左，左右的就减一。<br>
+如果往上，上下的就加一，往下，上下的就减一。<br>
+那么首先就应该把这个字符串转换成char数组，这样就可以用for循环一个个检测了。<br>
+最后判断上下，左右是否为0，如果为0，那就return true。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[力扣-两数之和]]></title>
         <id>https://VincentZ007.github.io/post/li-kou-liang-shu-zhi-he/</id>
@@ -667,35 +717,6 @@ Markdwon情法， 标题逐新变小:</p>
 </table>
 <hr>
 <p>##13.<a href="https://www.runoob.com/markdown/md-tutorial.html">markdown语法链接</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[笔记-2020/06/10]]></title>
-        <id>https://VincentZ007.github.io/post/bi-ji-20200610/</id>
-        <link href="https://VincentZ007.github.io/post/bi-ji-20200610/">
-        </link>
-        <updated>2020-06-10T18:50:22.000Z</updated>
-        <content type="html"><![CDATA[<p>##老师发的</p>
-<ol>
-<li>添加Valine评论系统：在主题/config.json中修改添加Valine相关源码；</li>
-<li></li>
-</ol>
-<p>①在主题/templates/includes/中引入valine.ejs<br>
-②在主题/templates/post.ejs中引入<br>
-&lt;% if(typeof site.customConfig['valine']!=='undefined' &amp;&amp; site.customConfig['valine']) { %&gt;<br>
-&lt;%- include('./includes/valine') %&gt;<br>
-&lt;% } %&gt;<br>
-3. Valine评论系统简介：https://valine.js.org/；<br>
-4. Valine注册使用：https://github.com/DesertsP/Valine-Admin；<br>
-5. Valine邮件绑定；使用教程https://www.antmoe.com/posts/2380732b/index.html<br>
-6. 添加百度统计功能https://tongji.baidu.com/web/welcome/login<br>
-教程https://kily-007.github.io/post/gridea-tian-jia-bai-du-tong-ji/</p>
-<p>##笔记<br>
-今天学习了给博客添加留言功能。<br>
-这节课我先是注册了Valine账号（国际版），然后在Valine中创建了项目，添加了许多的环境变量：<br>
-<img src="https://VincentZ007.github.io//post-images/1591783308001.png" alt="" loading="lazy"><br>
-之后要在Gridea上添加留言功能，最开始的时候我选择的主题并没有自带Valine评论配置，所以就弄了半天，最后还是选择换了一个带Valine评论配置主题。<br>
-然后需要用Hbuilder来修改一些源代码，添加一个单独的留言页，最终也是成功完成了。</p>
 ]]></content>
     </entry>
 </feed>
